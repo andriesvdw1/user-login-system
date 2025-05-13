@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => {
     try {
         //Validate that username and password has values
-        if (req.body.username && req.body.password) {
+        if (req.body && req.body.username && req.body.password) {
             //Check that username and password is in the database,
             //valid if both username+password are present
             db.get(`SELECT * FROM tblUsers WHERE username = ? AND password =?`,
