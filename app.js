@@ -62,6 +62,11 @@ app.get('/dashboard', (req, res) => {
     }
 });
 
+app.post('/login', (req,res) =>{
+    const username = req.body.username;
+    const password = req.body.password;
+})
+
 //Start running the server
 const port = 3000;
 app.listen(port, () => {
